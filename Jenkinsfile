@@ -9,14 +9,7 @@ pipeline {
                 cleanWs()
             }
         }
-        
-        // Checkout source code from version control
-        stage('Checkout') {
-            steps {
-                git branch: 'main', credentialsId: 'myid', url:'https://github.com/Jeslinprasad/Moviemax.git' tool: 'git'
-            }
-        }
-        
+                    
         // Build frontend assets
         stage('Build') {
             steps {
