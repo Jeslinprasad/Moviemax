@@ -13,7 +13,7 @@ pipeline {
         // Build frontend assets
         stage('Build') {
             steps {
-               sh 'npm install'
+               echo 'Build App'
             }
         }
         
