@@ -13,7 +13,7 @@ pipeline {
         // Checkout source code from version control
         stage('Checkout') {
             steps {
-                git 'https://github.com/your/repository.git'
+                git 'https://github.com/Jeslinprasad/Moviemax.git'
             }
         }
         
