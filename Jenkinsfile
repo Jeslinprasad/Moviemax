@@ -13,7 +13,7 @@ pipeline {
         // Checkout source code from version control
         stage('Checkout') {
             steps {
-                git 'https://github.com/Jeslinprasad/Moviemax.git'
+                git branch: 'main', credentialsId: 'myid', url:'https://github.com/Jeslinprasad/Moviemax.git' tool: 'git'
             }
         }
         
