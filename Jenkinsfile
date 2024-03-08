@@ -10,31 +10,17 @@ pipeline {
                 cleanWs()
             }
         }
-        stage('Checkout') {
+        stage('Build') {
             steps {
-              git branch: 'main', url: 'https://github.com/Jeslinprasad/Moviemax.git'
-            }
-        }
-        stage('Install Dependencies') {
-            steps {
-                // Install project dependencies
+                // Install dependencies
                 sh 'npm install'
             }
         }
-        stage('Run Tests') {
-            steps {
-             echo 'test'
-            }
-        }
-        stage('Build') {
-            steps {
-             sh 'npm run build'
-            }
-        }
+
         stage('Deploy') {
             steps {
-                 sh 'npm run deploy'
+                 echo 'deploy'
             }
-        }
     }
 }
+
