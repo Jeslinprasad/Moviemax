@@ -28,6 +28,13 @@ pipeline {
                 }
             }
         }
+        stage("quality gate") {
+            steps {
+                script {
+                    waitForQualityGate abortPipeline: false, credentialsId: 'Sonar-token'
+                }
+            }
+        }
         stage('Build') {
             steps {
                 // Install dependencies using npm
