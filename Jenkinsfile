@@ -20,6 +20,14 @@ pipeline {
                 git branch: 'main', url: 'https://github.com/N4si/DevSecOps-Project.git'
             }
         }
+        stage("Sonarqube Analysis") {
+            steps {
+                withSonarQubeEnv('sonar-server') {
+                    sh '''$SCANNER_HOME/bin/sonar-scanner -Dsonar.projectName=Moviemax \
+                    -Dsonar.projectKey=Moviemax'''
+                }
+            }
+        }
         stage('Build') {
             steps {
                 // Install dependencies using npm
