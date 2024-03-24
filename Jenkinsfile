@@ -56,7 +56,7 @@ pipeline {
             steps{
                 script{
                    withDockerRegistry(credentialsId: 'docker', toolName: 'docker'){   
-                       sh "docker build --build-arg TMDB_V3_API_KEY=6ec06a92526736ec3b1d71623ec83501 -t Moviemax ."
+                       sh "docker build --build-arg VITE_API_KEY=6ec06a92526736ec3b1d71623ec83501 -t Moviemax ."
                        sh "docker tag Moviemax mdocker/Moviemax:latest "
                        sh "docker push mdocker/Moviemax:latest "
                     }
