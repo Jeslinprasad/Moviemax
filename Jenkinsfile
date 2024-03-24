@@ -15,6 +15,11 @@ pipeline {
                 cleanWs()
             }
         }
+        stage('Checkout from Git') {
+            steps {
+                git branch: 'main', url: 'https://github.com/N4si/DevSecOps-Project.git'
+            }
+        }
         stage('Build') {
             steps {
                 // Install dependencies using npm
