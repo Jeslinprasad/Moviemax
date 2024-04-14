@@ -1,1 +1,21 @@
-
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: moviemax-app
+  labels:
+    app: moviemax-app
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: moviemax-app
+  template:
+    metadata:
+      labels:
+        app: moviemax-app
+    spec:
+      containers:
+      - name: moviemax-app
+        image: jeslinprasad/moviemax:latest
+        ports:
+        - containerPort: 80
