@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: moviemax-app
-        image: jeslinprasad/moviemax:latest
+        image: jeslinhanna/moviemax:latest
         ports:
         - containerPort: 80
