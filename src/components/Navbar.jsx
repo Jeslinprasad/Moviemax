@@ -15,7 +15,7 @@ function Navbar() {
 
     // console.log(user)
     const Navdata = [
-        {
+         /** {
             id: 1,
             headername: "Genres",
             Name: "Genres",
@@ -32,13 +32,13 @@ function Navbar() {
             headername: "Upcoming Movies",
             Name: "Upcoming",
             link:"/upcoming"
-        },
+        },**/
         {
             id: 4,
             headername: "Favorite Movies",
             Name: "Favorites",
             link:"/favorite"
-        }**/
+        }
     ]
 
     return (
