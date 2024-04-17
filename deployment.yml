@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: movie-deploymen
+  labels:
+    app: movie
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: movie
+  template:
+    metadata:
+      labels:
+        app: movie
+    spec:
+      containers:
+      - name: movie
+        image: jeslinhanna/movie:latest
+        ports:
+        - containerPort: 8081
