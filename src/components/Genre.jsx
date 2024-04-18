@@ -11,16 +11,16 @@ function Genre() {
     }, []) 
 
 
-    // const filterFunc = () => {
-    //     if (activegenre === 0) {
-    //         setFiltered(movies)
-    //     } else {
-    //         const filteredgenre = movies.filter((movie) =>
-    //           movie.genre_ids.includes(activegenre)
-    //         );
-    //         setFiltered(filteredgenre);
-    //     }
-    // }
+    const filterFunc = () => {
+      if (activegenre === 0) {
+          setFiltered(movies)
+      } else {
+          const filteredgenre = movies.filter((movie) =>
+       movie.genre_ids.includes(activegenre)
+      );
+       setFiltered(filteredgenre);
+       }
+     }
 
     return (
         <>
