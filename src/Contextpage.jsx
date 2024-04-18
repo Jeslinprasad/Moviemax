@@ -47,9 +47,9 @@ export function MovieProvider({ children }) {
   };
 
   const fetchSearch = async (query) => {
-    const data = await fetch(
+    /**const data = await fetch(
       `https://api.themoviedb.org/3/search/movie?api_key=${APIKEY}&with_origin_country=IN&language=en-US&query=${query}&page=1&include_adult=false`
-    );
+    );**/
     const searchmovies = await data.json();
     setSearchedMovies(searchmovies.results); 
     setLoader(false);
