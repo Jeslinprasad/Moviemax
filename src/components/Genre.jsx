@@ -6,9 +6,9 @@ function Genre() {
     const { fetchGenre, activegenre, setActiveGenre, genres, setMovies, page, setPage, filteredGenre } = useContext(Contextpage);    
 
 
-    /**useEffect(() => {
+    useEffect(() => {
         fetchGenre();  // Fetching Genres on Initial Render.
-    }, [])**/
+    }, []) 
 
 
     // const filterFunc = () => {
