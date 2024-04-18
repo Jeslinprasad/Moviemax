@@ -11,7 +11,9 @@ import Player from './pages/Player';
 import Search from './pages/Search';
 import { Helmet } from "react-helmet";
 import logo from "./assets/images/logo.png"
-
+import Favorite from './pages/Favoritepage';
+import Trending from './pages/Trending';
+import Upcoming from './pages/Upcoming';
 function App() {
 
   return (
@@ -42,10 +44,11 @@ function App() {
           <Route path="/player/:id" element={<Player />} /> {/*Route-2 For Player. Movie still available even if someone removes Title from end of the url.*/}
           <Route path="/search/:query" element={<Container/>}/>
           <Route path="/search/" element={<Container/>}/>
+          <Route path="/favorite" element={<Favorite/>}/>
+          <Route path='/trending' element={<Trending />} />
+          <Route path='/upcoming' element={<Upcoming />} />
         </Routes>
       </div>
     </MovieProvider>
   )
 }
-
-export default App
