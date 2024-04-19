@@ -24,7 +24,7 @@ function Navbar() {
         {
             id: 2,
             headername: "Trending Movies",
-            Name: "Trending",
+            Name: "Trends",
             link:"/trending"
         },
         {
